@@ -1,11 +1,60 @@
 {
-	"files": [],
-	"references": [
-		{
-			"path": "./tsconfig.node.json"
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"skipLibCheck": true,
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "preserve",
+
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+
+		/* Vue specific */
+		"allowJs": true,
+		"checkJs": false,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"verbatimModuleSyntax": false,
+
+		/* Path mapping */
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"]
 		},
-		{
-			"path": "./tsconfig.app.json"
-		}
+
+		/* Additional helpful options */
+		"declaration": false,
+		"declarationMap": false,
+		"sourceMap": true,
+		"removeComments": false,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitOverride": true,
+		"exactOptionalPropertyTypes": true
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"src/**/*.js",
+		"src/**/*.jsx",
+		"vite.config.*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
 	]
 }
