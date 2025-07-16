@@ -190,17 +190,6 @@ canvas.onmousemove = function(e) {
 
 <template>
 	<main>
-		<div class="container"></div>
+		<div class="flex justify-center items-center"></div>
 	</main>
 </template>
-
-<style scoped>
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-
-
-}
-</style>
